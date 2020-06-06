@@ -1,0 +1,76 @@
+#skills {
+  height: 450px;
+  padding-top: 50px;
+
+  .skills-wrapper {
+    width: 1050px;
+    margin: 0 auto;
+
+    h1 {
+      font-family: "Lobster";
+      color: $primary-color;
+      font-size: 50px;
+      font-weight: 500;
+      padding: 20px 0 45px 0;
+      text-align: center;
+    }
+
+    .icons-wrapper,
+    .icons-wrapper2 {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+
+      img {
+        padding-bottom: 5px;
+      }
+    }
+
+    .icons-wrapper2 {
+      width: 50%;
+      margin: 85px auto 0 auto;
+    }
+  }
+}
+
+.icon {
+  transform: translateY(18px);
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+
+.icon-slide {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.icon:nth-of-type(1) {
+  transition-delay: 0.2s;
+}
+
+.icon:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+
+.icon:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+
+.icon:nth-of-type(4) {
+  transition-delay: 0.8s;
+}
+
+.icon:nth-of-type(5) {
+  transition-delay: 1s;
+}
+
+.icon2:nth-of-type(1) {
+  transition-delay: 1.2s;
+}
+
+.icon2:nth-of-type(2) {
+  transition-delay: 1.4s;
+}
