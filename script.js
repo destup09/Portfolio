@@ -48,10 +48,12 @@
     scrollFunction();
   };
 
+  const windowWidth = window.innerWidth / 20;
+
   function scrollFunction() {
     if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
+      document.body.scrollTop > windowWidth ||
+      document.documentElement.scrollTop > windowWidth
     ) {
       document.querySelector("#nav").classList.add("nav-active");
       document.querySelector("#nav").style.height = "60px";

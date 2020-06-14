@@ -90,7 +90,7 @@ button:focus {
 
 #nav a {
   position: relative;
-  margin-left: 120px;
+  margin: 0 60px 0 60px;
 }
 
 #nav a,
@@ -138,10 +138,12 @@ button:focus {
   width: 500px;
 }
 
-#landing-page .landing-text p {
-  line-height: 30px;
-  color: #5e5e5e;
-  font-size: 18px;
+@media (min-width: 1440px) {
+  #landing-page .landing-p {
+    line-height: 30px;
+    color: #5e5e5e;
+    font-size: 18px;
+  }
 }
 
 #landing-page .landing-img {
@@ -258,6 +260,46 @@ button:focus {
   margin-right: 10px;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+@media (max-width: 1440px) {
+  .landing-svg {
+    width: 700px;
+    height: 450px;
+    margin-left: 40px;
+  }
+  #landing-page {
+    margin: 80px auto 0 auto;
+    padding-top: 50px;
+    height: 700px;
+  }
+  .landing-p {
+    line-height: 30px;
+    color: #5e5e5e;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .landing-img {
+    padding-top: 30px;
+    height: 350px;
+  }
+  .landing-svg {
+    width: 500px;
+    height: 300px;
+    margin-left: 10px;
+  }
+  .landing-text {
+    width: 400px;
+    height: 400px;
+  }
+  .h2-wrapper {
+    margin-top: 30px;
+  }
+  .links a {
+    margin: 0 20px 0 20px !important;
+  }
 }
 
 #portfolio {
@@ -448,8 +490,34 @@ button:focus {
 
 .project-anim-show {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-animation: project-anim-show 0.3s ease-out;
+          animation: project-anim-show 0.3s ease-out;
+}
+
+@-webkit-keyframes project-anim-show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes project-anim-show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .project-anim-hide {
@@ -533,6 +601,18 @@ button:focus {
   opacity: 1;
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+}
+
+@media (max-width: 1440px) {
+  #portfolio {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .img-wrapper {
+    margin-top: 8rem;
+  }
 }
 
 #footer {

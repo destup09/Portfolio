@@ -47,7 +47,7 @@
 
   a {
     position: relative;
-    margin-left: 120px;
+    margin: 0 60px 0 60px;
   }
 
   a,
@@ -92,13 +92,16 @@
 
   .landing-text {
     width: 500px;
+  }
 
-    p {
+  @media (min-width: $laptopL) {
+    .landing-p {
       line-height: 30px;
       color: $text-color;
       font-size: 18px;
     }
   }
+
   .landing-img {
     display: flex;
     flex: 2;
@@ -189,4 +192,52 @@
   margin-right: 10px;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+@media (max-width: $laptopL) {
+  .landing-svg {
+    width: 700px;
+    height: 450px;
+    margin-left: 40px;
+  }
+
+  #landing-page {
+    margin: 80px auto 0 auto;
+    padding-top: 50px;
+    height: 700px;
+  }
+
+  .landing-p {
+    line-height: 30px;
+    color: $text-color;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .landing-img {
+    padding-top: 30px;
+    height: 350px;
+  }
+
+  .landing-svg {
+    width: 500px;
+    height: 300px;
+    margin-left: 10px;
+  }
+
+  .landing-text {
+    width: 400px;
+    height: 400px;
+  }
+
+  .h2-wrapper {
+    margin-top: 30px;
+  }
+
+  .links {
+    a {
+      margin: 0 20px 0 20px !important;
+    }
+  }
 }

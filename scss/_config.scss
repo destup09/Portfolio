@@ -11,10 +11,12 @@ $text-color: #5e5e5e;
 $text-color2: darken($text-color, 25%);
 $footer-color: #222;
 
-$breakpoint-fullhd: 1980px;
-$breakpoint-hd: 1280px;
-$breakpoint-tablet: 768px;
-$breakpoint-tablet2: 1024px;
+$desktop: 2560px;
+$laptopL: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 525px;
+$mobileS: 320px;
 
 button:focus {
   outline: 0;

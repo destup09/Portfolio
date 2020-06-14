@@ -163,7 +163,19 @@
 
 .project-anim-show {
   opacity: 1;
-  transform: translateY(0px);
+  animation: project-anim-show 0.3s ease-out;
+}
+
+@keyframes project-anim-show {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .project-anim-hide {
@@ -213,4 +225,16 @@
 .projects-slide {
   opacity: 1;
   transform: translateY(-12px);
+}
+
+@media (max-width: $laptopL) {
+  #portfolio {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: $laptopL) {
+  .img-wrapper {
+    margin-top: 8rem;
+  }
 }
