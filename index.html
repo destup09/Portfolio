@@ -148,9 +148,9 @@
           </svg>
         </div>
         <ul class="links">
-          <a href="#landing-page"><li>Strona główna</li></a>
-          <a href="#portfolio"><li>Projekty</li></a>
-          <a href="#skills"><li>Umiejętności</li></a>
+          <a class="nav-a" href="#landing-page"><li>Strona główna</li></a>
+          <a class="nav-a" href="#portfolio"><li>Projekty</li></a>
+          <a class="nav-a" href="#skills"><li>Umiejętności</li></a>
         </ul>
       </div>
     </header>
@@ -164,8 +164,7 @@
         <p class="landing-p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
           adipisci sapiente voluptatum facilis laudantium ad ab labore repellat
-          ratione culpa quia hic magni consectetur quo commodi, totam debitis
-          repellendus laboriosam.
+          ratione culpa quia hic magni consectetur quo commodi.
         </p>
         <div class="contacts-wrapper">
           <div class="call">
@@ -447,16 +446,12 @@
     <section id="portfolio">
       <div class="portfolio-container">
         <h1>Projekty</h1>
-        <div class="portfolio-select">
-          <p class="port-str selected">strony internetowe</p>
-          <p>/</p>
-          <p class="port-graf">projekty graficzne</p>
-        </div>
+
+        <h3 class="project-type">Strony internetowe</h3>
 
         <div class="websites-wrapper">
           <div class="row-wrapper">
             <div class="project">
-              <h3 class="project-title">Weather App</h3>
               <div class="img-container">
                 <img
                   class="project-image img1"
@@ -464,8 +459,17 @@
                   alt="image"
                 />
               </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Weather App</h3>
 
-              <div class="project-info">
+              <p>
+                Aplikacja do sprawdzania pogody zrobiona przy użyciu React i
+                openweathermap API. Po wyszukaniu miasta pokazuje pogodę na 5
+                dni.
+              </p>
+
+              <div class="cta">
                 <a
                   href="https://github.com/destup09/WeatherApp"
                   target="_blank"
@@ -481,18 +485,28 @@
                 </a>
               </div>
             </div>
+          </div>
 
+          <div class="row-wrapper">
             <div class="project">
-              <h3 class="project-title">Websited</h3>
               <div class="img-container">
                 <img
-                  class="project-image"
+                  class="project-image img1"
                   src="files/websited-big.png"
-                  alt="image"
+                  alt="websited-image"
                 />
               </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Websited</h3>
 
-              <div class="project-info">
+              <p>
+                Aplikacja do tworzenia projektów stron internetowych. Korzysta z
+                Unsplash API do wyszukiwania zdjęć. Można konfigurować rozmiar,
+                kolor, kształt i położenie elementów.
+              </p>
+
+              <div class="cta">
                 <a href="https://github.com/destup09/wix" target="_blank">
                   <button class="project1-cta">Github</button>
                 </a>
@@ -501,67 +515,109 @@
                   href="https://destup09.github.io/webisted/htmls/project.html"
                   target="_blank"
                 >
-                  <button class="project1-cta">Zobacz stronę</button>
+                  <button class="project1-cta view-site">Zobacz stronę</button>
                 </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="row-wrapper">
-            <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
-                <button class="project1-cta">Zobacz stronę</button>
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
-
-                <button class="project-cta">Zobacz stronę</button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="design-wrapper invisible">
+        <h3 class="project-type">Projekty graficzne</h3>
+
+        <div class="graphic-wrapper">
           <div class="row-wrapper">
             <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
-                <button class="project1-cta">Zobacz stronę</button>
+              <div class="img-container">
+                <img
+                  style="border: 1px solid #999;"
+                  class="project-image img1"
+                  src="files/podcast-big.png"
+                  alt="websited-image"
+                />
               </div>
             </div>
+            <div class="project-info">
+              <h3 class="project-title">THE SMARTERS</h3>
 
-            <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
+              <p>
+                Projekt graficzny strony dla podcasterów oraz sponsorów dla
+                zagranicznej firmy. Zawiera design na komputery, tablety,
+                telefony oraz darkmode.
+              </p>
 
-                <button class="project-cta">Zobacz stronę</button>
+              <div class="cta">
+                <a href="https://github.com/destup09/wix" target="_blank">
+                  <button class="project1-cta">Pobierz pdf</button>
+                </a>
+
+                <a href="project-1.html">
+                  <button class="project1-cta view-site">Zobacz projekt</button>
+                </a>
               </div>
             </div>
           </div>
-
           <div class="row-wrapper">
             <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
-                <button class="project1-cta">Zobacz stronę</button>
+              <div class="img-container">
+                <img
+                  style="border: 1px solid #999;"
+                  class="project-image img1"
+                  src="files/sp-design-big.png"
+                  alt="websited-image"
+                />
               </div>
             </div>
+            <div class="project-info">
+              <h3 class="project-title">SP DESIGN</h3>
 
+              <p>
+                Projekt graficzny portfolio projektanta aplikacji internetowych.
+                Zawiera design na komputer i telefon.
+              </p>
+
+              <div class="cta">
+                <a href="https://github.com/destup09/wix" target="_blank">
+                  <button class="project1-cta">Pobierz pdf</button>
+                </a>
+
+                <a
+                  href="https://piotrszulc121.wixsite.com/mojawitryna-3"
+                  target="_blank"
+                >
+                  <button class="project1-cta view-site">Zobacz projekt</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-wrapper">
             <div class="project">
-              <div class="project-image"></div>
-              <div class="project-info">
-                <h3 class="project-title">Placeholder</h3>
+              <div class="img-container">
+                <img
+                  style="border: 1px solid #999;"
+                  class="project-image img1"
+                  src="files/sklep-meblowy-big.png"
+                  alt="websited-image"
+                />
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">FURNITURES</h3>
 
-                <button class="project-cta">Zobacz stronę</button>
+              <p>
+                Projekt graficzny sklepu meblowego.
+              </p>
+
+              <div class="cta">
+                <a href="https://github.com/destup09/wix" target="_blank">
+                  <button class="project1-cta">Pobierz pdf</button>
+                </a>
+
+                <a
+                  href="project-2.html"
+                  target="_blank"
+                >
+                  <button class="project1-cta view-site">Zobacz projekt</button>
+                </a>
               </div>
             </div>
           </div>
@@ -642,9 +698,7 @@
       </div>
 
       <div class="credit">
-        <p>
-          Wykonanie strony: <span style="font-weight: 600;">Piotr Szulc</span>
-        </p>
+        <p>© 2020 <span style="font-weight: 600;">Piotr Szulc</span></p>
       </div>
     </section>
 

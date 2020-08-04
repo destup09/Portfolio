@@ -1,46 +1,39 @@
 (function () {
-  const websitesWrapper = document.querySelector(".websites-wrapper");
-  const designWrapper = document.querySelector(".design-wrapper");
-  const webBtn = document.querySelector(".port-str");
-  const designBtn = document.querySelector(".port-graf");
-  let portfolioBtn;
+  const menu = document.querySelectorAll(".port-menu");
+  const rowWebsites = document.querySelector(".row-websites");
+  const rowDesign = document.querySelectorAll(".row-graphic");
+  const projectsWrapper = document.querySelector("#portfolio");
 
-  webBtn.addEventListener("click", priceList);
-  designBtn.addEventListener("click", priceList);
+  let prev = menu[0];
 
-  function priceList() {
-    if (this.className == "port-str") {
-      portfolioBtn = true;
-    } else if (this.className == "port-graf") {
-      portfolioBtn = false;
-    }
+  menu.forEach(function (item) {
+    item.addEventListener("click", function () {
+      if (prev) {
+        prev.classList.remove("selected");
+      }
+      prev = this;
+      this.classList.add("selected");
+      let current = event.target;
 
-    webBtn.classList.remove("selected");
-    designBtn.classList.remove("selected");
-    this.classList.add("selected");
-
-    console.log(portfolioBtn);
-
-    websitesWrapper.classList.remove("fade-in");
-    websitesWrapper.classList.remove("fade-out");
-    designWrapper.classList.remove("fade-out");
-    designWrapper.classList.remove("fade-in");
-    if (!portfolioBtn) {
-      websitesWrapper.classList.add("fade-out");
-      setTimeout(function () {
-        websitesWrapper.classList.add("invisible");
-        designWrapper.classList.remove("invisible");
-        designWrapper.classList.add("fade-in");
-      }, 200);
-    } else {
-      designWrapper.classList.add("fade-out");
-      setTimeout(function () {
-        designWrapper.classList.add("invisible");
-        websitesWrapper.classList.remove("invisible");
-        websitesWrapper.classList.add("fade-in");
-      }, 200);
-    }
-  }
+      if (current == menu[0]) {
+        rowWebsites.classList.remove("invisible");
+        rowDesign.forEach(function (item) {
+          item.classList.remove("invisible");
+        });
+      } else if (current == menu[1]) {
+        rowWebsites.classList.remove("invisible");
+        rowDesign.forEach(function (item) {
+          item.classList.add("fade-out");
+          setTimeout(() => {
+            item.style.display = "none";
+            projectsWrapper.classList.add("portfolio-up");
+            projectsWrapper.style.height = "750px";
+          }, 300);
+        });
+      }
+      console.log(rowDesign[1]);
+    });
+  });
 })();
 
 (function () {

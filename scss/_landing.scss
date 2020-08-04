@@ -45,11 +45,6 @@
     color: $text-color2;
   }
 
-  a {
-    position: relative;
-    margin: 0 60px 0 60px;
-  }
-
   a,
   a:after,
   a:before {
@@ -74,6 +69,11 @@
   }
 }
 
+a {
+  position: relative;
+  margin: 0 60px 0 60px;
+}
+
 //landing page
 
 #landing-page {
@@ -94,32 +94,29 @@
     width: 500px;
   }
 
-  @media (min-width: $laptopL) {
-    .landing-p {
-      line-height: 30px;
-      color: $text-color;
-      font-size: 18px;
-    }
-  }
-
   .landing-img {
     display: flex;
     flex: 2;
     justify-content: flex-end;
   }
 
-  .h2-wrapper {
-    display: flex;
-    margin-top: 80px;
-    margin-bottom: 25px;
-
-    h1 {
-      color: $primary-color;
-      font-family: "Lobster";
-      margin-right: 9px;
-      font-size: 40px;
-    }
+  .landing-h2 {
+    color: $primary-color;
+    font-family: "Lobster";
+    margin-right: 9px;
+    font-size: 40px;
   }
+}
+
+.landing-p {
+  line-height: 32px;
+  font-size: 18px;
+}
+
+.h2-wrapper {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 25px;
 }
 
 .landing-bg {
@@ -127,7 +124,7 @@
 }
 
 .contacts-wrapper {
-  width: 450px;
+  width: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,6 +143,7 @@
   a {
     text-decoration: none;
     color: white;
+    margin: 0 10px 0 10px;
   }
 
   &:hover {
@@ -182,7 +180,7 @@
   display: flex;
   align-items: center;
   font-size: 18px;
-  width: 190px;
+  width: 180px;
   height: 55px;
   border-radius: 100px;
   border: none;
@@ -215,6 +213,10 @@
 }
 
 @media (max-width: $laptop) {
+  .nav-a {
+    margin: 0 30px 0 30px;
+  }
+
   .landing-img {
     padding-top: 30px;
     height: 350px;
@@ -235,9 +237,13 @@
     margin-top: 30px;
   }
 
-  .links {
-    a {
-      margin: 0 20px 0 20px !important;
-    }
+  .landing-p {
+    width: 400px;
+  }
+
+  .call > a {
+    margin: 0px;
+    width: 190px;
+    text-align: center;
   }
 }

@@ -7,6 +7,7 @@
 }
 
 $primary-color: #3976ab;
+$primary-dark: darken($primary-color, 10%);
 $text-color: #5e5e5e;
 $text-color2: darken($text-color, 25%);
 $footer-color: #222;

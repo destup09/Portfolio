@@ -88,11 +88,6 @@ button:focus {
   color: #1e1e1e;
 }
 
-#nav a {
-  position: relative;
-  margin: 0 60px 0 60px;
-}
-
 #nav a,
 #nav a:after,
 #nav a:before {
@@ -117,6 +112,11 @@ button:focus {
   width: 100%;
 }
 
+a {
+  position: relative;
+  margin: 0 60px 0 60px;
+}
+
 #landing-page {
   width: 100%;
   padding-left: 5%;
@@ -138,14 +138,6 @@ button:focus {
   width: 500px;
 }
 
-@media (min-width: 1440px) {
-  #landing-page .landing-p {
-    line-height: 30px;
-    color: #5e5e5e;
-    font-size: 18px;
-  }
-}
-
 #landing-page .landing-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,7 +150,19 @@ button:focus {
           justify-content: flex-end;
 }
 
-#landing-page .h2-wrapper {
+#landing-page .landing-h2 {
+  color: #3976ab;
+  font-family: "Lobster";
+  margin-right: 9px;
+  font-size: 40px;
+}
+
+.landing-p {
+  line-height: 32px;
+  font-size: 18px;
+}
+
+.h2-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,19 +170,12 @@ button:focus {
   margin-bottom: 25px;
 }
 
-#landing-page .h2-wrapper h1 {
-  color: #3976ab;
-  font-family: "Lobster";
-  margin-right: 9px;
-  font-size: 40px;
-}
-
 .landing-bg {
   width: 90%;
 }
 
 .contacts-wrapper {
-  width: 450px;
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,6 +204,7 @@ button:focus {
 .call a {
   text-decoration: none;
   color: white;
+  margin: 0 10px 0 10px;
 }
 
 .call:hover {
@@ -250,7 +248,7 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   font-size: 18px;
-  width: 190px;
+  width: 180px;
   height: 55px;
   border-radius: 100px;
   border: none;
@@ -281,6 +279,9 @@ button:focus {
 }
 
 @media (max-width: 1024px) {
+  .nav-a {
+    margin: 0 30px 0 30px;
+  }
   .landing-img {
     padding-top: 30px;
     height: 350px;
@@ -297,14 +298,19 @@ button:focus {
   .h2-wrapper {
     margin-top: 30px;
   }
-  .links a {
-    margin: 0 20px 0 20px !important;
+  .landing-p {
+    width: 400px;
+  }
+  .call > a {
+    margin: 0px;
+    width: 190px;
+    text-align: center;
   }
 }
 
 #portfolio {
   width: 100%;
-  height: 1050px;
+  height: 2200px;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 50px;
@@ -312,59 +318,40 @@ button:focus {
   overflow-y: hidden;
 }
 
-#portfolio .portfolio-container {
+.portfolio-container {
   width: 1050px;
   margin: 0 auto;
 }
 
-#portfolio h1 {
+h1 {
   font-family: "Lobster";
   color: #3976ab;
   font-size: 50px;
   font-weight: 500;
+  margin-bottom: 40px;
 }
 
-#portfolio p {
+.project-type {
+  color: #1e1e1e;
+  font-weight: 500;
+  font-size: 22px;
+  padding: 30px 0 15px 0;
+  margin: 0 auto 55px auto;
+  width: 200px;
+}
+
+p {
   color: #5e5e5e;
   font-size: 20px;
 }
 
-#portfolio .portfolio-select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 15px 0 80px 0;
+.websites-wrapper {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #999;
 }
 
-#portfolio .portfolio-select .port-str {
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-#portfolio .portfolio-select .port-graf {
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-#portfolio .portfolio-select .port-str,
-#portfolio .portfolio-select .port-graf {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-#portfolio .portfolio-select .port-str:hover,
-#portfolio .portfolio-select .port-graf:hover {
-  color: #1e1e1e;
-}
-
-#portfolio .portfolio-select .selected {
-  font-weight: bold;
-  color: #1e1e1e;
-}
-
-#portfolio .row-wrapper {
+.row-wrapper {
+  padding-top: 30px;
   width: 1050px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,25 +364,17 @@ button:focus {
   transition: 1s ease-out;
 }
 
-#portfolio .row-wrapper .project {
+.project {
   margin-bottom: 80px;
 }
 
-#portfolio .row-wrapper .project h3 {
-  color: #1e1e1e;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-#portfolio .row-wrapper .project .img-container {
+.img-container {
   overflow: hidden;
   width: 473px;
   height: 236px;
 }
 
-#portfolio .row-wrapper .project .project-image {
+.project-image {
   width: 473px;
   height: 236px;
   background: white;
@@ -406,17 +385,14 @@ button:focus {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-#portfolio .row-wrapper .project .project-image:hover {
+.project-image:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#portfolio .row-wrapper .project .project-info {
-  width: 473px;
+.project-info {
+  width: 440px;
   height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -424,7 +400,21 @@ button:focus {
       justify-content: space-around;
 }
 
-#portfolio .row-wrapper .project .project-info button {
+.project-info h3 {
+  color: #1e1e1e;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.project-info p {
+  line-height: 32px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.project-info button {
   font-size: 16px;
   font-weight: 500;
   width: 160px;
@@ -435,19 +425,35 @@ button:focus {
   cursor: pointer;
   background: #3976ab;
   color: white;
+  padding: 0px;
+  margin: 0px;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
-#portfolio .row-wrapper .project .project-info button:hover {
+.project-info button:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   -webkit-box-shadow: 0px 9px 15px -8px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 9px 15px -8px rgba(0, 0, 0, 0.75);
 }
 
-#portfolio .row-wrapper .project .project-info .view-site {
+.project-info .view-site {
   width: 160px;
+}
+
+.cta {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 440px;
 }
 
 .img-focused {
@@ -486,6 +492,48 @@ button:focus {
   color: white;
   padding-left: 10px;
   cursor: pointer;
+}
+
+.podcast-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px auto 25px auto;
+  width: 360px;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.podcast-menu p {
+  margin: 15px 35px 15px 35px;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+.podcast-menu p:hover {
+  border-bottom: 1px solid #999;
+}
+
+.pc-wrapper {
+  margin-bottom: 20px;
+}
+
+.pc-wrapper img {
+  width: 100%;
+  height: auto;
+  padding: 0px 0 20px 0;
+  border-bottom: 1px solid #5e5e5e;
+}
+
+@media (max-width: 525px) {
+  .phone-wrapper {
+    width: 100%;
+  }
 }
 
 .project-anim-show {
@@ -607,11 +655,57 @@ button:focus {
   #portfolio {
     padding-top: 0;
   }
-}
-
-@media (max-width: 1440px) {
   .img-wrapper {
     margin-top: 8rem;
+  }
+}
+
+.portfolio-up {
+  -webkit-animation: portfolio-up 0.75s ease-in-out;
+          animation: portfolio-up 0.75s ease-in-out;
+}
+
+@-webkit-keyframes portfolio-up {
+  from {
+    height: 1550px;
+  }
+  to {
+    height: 750px;
+  }
+}
+
+@keyframes portfolio-up {
+  from {
+    height: 1550px;
+  }
+  to {
+    height: 750px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #portfolio {
+    width: 100%;
+  }
+  .portfolio-container {
+    width: 900px;
+  }
+  .project {
+    width: 380px;
+  }
+  .row-wrapper {
+    width: 900px;
+  }
+  .project-image,
+  .img-container {
+    width: 380px;
+    height: 200px;
+  }
+  .project-info {
+    width: 380px;
+  }
+  .project-info > a {
+    margin: 0px;
   }
 }
 
@@ -624,7 +718,7 @@ button:focus {
 }
 
 #footer .socials {
-  width: 1050px;
+  width: 1024px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,7 +743,7 @@ button:focus {
 
 #footer .contact,
 #footer .credit {
-  width: 1050px;
+  width: 1024px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -932,7 +1026,7 @@ button:focus {
 }
 
 #skills .skills-wrapper {
-  width: 1050px;
+  width: 1024px;
   margin: 0 auto;
 }
 
@@ -1015,5 +1109,14 @@ button:focus {
 .icon2:nth-of-type(2) {
   -webkit-transition-delay: 1.4s;
           transition-delay: 1.4s;
+}
+
+@media (max-width: 1024px) {
+  .skills-wrapper {
+    width: 1024px;
+  }
+  .icons-wrapper {
+    width: 1024px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

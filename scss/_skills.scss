@@ -3,7 +3,7 @@
   padding-top: 50px;
 
   .skills-wrapper {
-    width: 1050px;
+    width: 1024px;
     margin: 0 auto;
 
     h1 {
@@ -73,4 +73,14 @@
 
 .icon2:nth-of-type(2) {
   transition-delay: 1.4s;
+}
+
+@media (max-width: $laptop) {
+  .skills-wrapper {
+    width: 1024px;
+  }
+
+  .icons-wrapper {
+    width: 1024px;
+  }
 }
