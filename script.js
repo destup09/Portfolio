@@ -55,9 +55,11 @@
       document.querySelector("#nav").style.height = "110px";
     }
 
+    console.log(document.documentElement.scrollTop);
+
     if (
-      document.body.scrollTop > 410 ||
-      document.documentElement.scrollTop > 410
+      document.body.scrollTop > 650 ||
+      document.documentElement.scrollTop > 650
     ) {
       const rowWrapper = document.querySelectorAll(".row-wrapper");
       rowWrapper.forEach(function (row) {
@@ -67,8 +69,8 @@
     }
 
     if (
-      document.body.scrollTop > 1400 ||
-      document.documentElement.scrollTop > 1400
+      document.body.scrollTop > 1600 ||
+      document.documentElement.scrollTop > 1600
     ) {
       const icons = document.querySelectorAll(".icon");
       icons.forEach(function (icon) {
@@ -120,5 +122,41 @@
   email.addEventListener("mouseleave", function () {
     emailArrow.classList.remove("email-hover-enter");
     emailArrow.classList.add("email-hover-leave");
+  });
+})();
+
+(function () {
+  const icon = document.querySelector(".hamburger");
+  const body = document.getElementsByTagName("BODY")[0];
+  const menu = document.querySelector(".phone-menu");
+  const menuItem = document.querySelectorAll(".phone-item");
+  let clicked = false;
+
+  icon.addEventListener("click", function () {
+    console.log(this.children[1]);
+    if (clicked) {
+      menuItem.forEach(function (item) {
+        item.classList.remove("phone-item-slide");
+      });
+      setTimeout(function () {
+        body.classList.remove("scroll-disabled");
+        menu.style.height = "0%";
+        icon.children[0].classList.remove("lane1-rotated");
+        icon.children[1].classList.remove("lane2-rotated");
+        icon.children[2].classList.remove("lane3-rotated");
+      }, 500);
+    } else {
+      body.classList.add("scroll-disabled");
+      menu.style.height = "100%";
+      icon.children[0].classList.add("lane1-rotated");
+      icon.children[1].classList.add("lane2-rotated");
+      icon.children[2].classList.add("lane3-rotated");
+
+      menuItem.forEach(function (item) {
+        item.classList.add("phone-item-slide");
+      });
+    }
+
+    clicked = !clicked;
   });
 })();

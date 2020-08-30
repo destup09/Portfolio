@@ -11,13 +11,6 @@
   z-index: 99;
   background-color: white;
 
-  .links {
-    display: flex;
-    flex: 2;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
   .logo {
     display: flex;
     flex: 1;
@@ -69,9 +62,20 @@
   }
 }
 
+.links {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 a {
   position: relative;
   margin: 0 60px 0 60px;
+}
+
+.phone-menu {
+  display: none;
 }
 
 //landing page
@@ -90,16 +94,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 
-  .landing-text {
-    width: 500px;
-  }
-
-  .landing-img {
-    display: flex;
-    flex: 2;
-    justify-content: flex-end;
-  }
-
   .landing-h2 {
     color: $primary-color;
     font-family: "Lobster";
@@ -107,16 +101,25 @@ a {
     font-size: 40px;
   }
 }
+.landing-text {
+  width: 500px;
+}
+
+.landing-img {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+}
 
 .landing-p {
   line-height: 32px;
   font-size: 18px;
+  padding-bottom: 15px;
 }
 
 .h2-wrapper {
   display: flex;
-  margin-top: 80px;
-  margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 .landing-bg {
@@ -245,5 +248,178 @@ a {
     margin: 0px;
     width: 190px;
     text-align: center;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .landing-img {
+    display: none;
+  }
+
+  #nav {
+    height: 80px;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  #landing-page {
+    padding-top: 10px;
+    background-position: 0px -40px;
+    height: 600px;
+  }
+
+  .landing-text {
+    width: 100%;
+    height: 550px;
+
+    .landing-p {
+      width: 335px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .contacts-wrapper {
+      width: 100%;
+      margin: 15px 0 0 0;
+      padding: 0;
+      flex-direction: column;
+
+      a {
+        margin: 0px;
+      }
+
+      .email {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .call {
+      margin: 0px;
+    }
+
+    .email {
+      margin-right: 0px;
+      margin-top: 10px;
+      width: 138px;
+      text-align: center;
+    }
+
+    .fa-arrow-right {
+      display: none;
+    }
+  }
+  .landing-h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0px auto 20px auto;
+  }
+
+  .hamburger {
+    height: 20px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    @include transition-ease;
+  }
+
+  .icon-line {
+    width: 30px;
+    height: 3px;
+    background-color: $text-color;
+    margin: 0 0 5px 0;
+    @include transition-ease-fast;
+  }
+
+  .line3 {
+    width: 25px;
+    float: right;
+  }
+
+  .lane1-rotated {
+    transform: rotate(45deg) translate(6px, 5px);
+  }
+
+  .lane2-rotated {
+    opacity: 0;
+  }
+
+  .lane3-rotated {
+    transform: rotate(-45deg) translate(6px, -5px);
+    width: 30px;
+  }
+
+  .phone-menu {
+    display: flex;
+    width: 100vw;
+    height: 0%;
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    @include transition-ease;
+  }
+
+  .phone-items-wrapper {
+    width: 100vw;
+    height: 100%;
+    padding-top: 200px;
+  }
+
+  .phone-item {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    color: $text-color;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.3s ease-in-out;
+
+    li {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .phone-item1 {
+      transition-delay: 0.15s;
+    }
+
+    .phone-item2 {
+      transition-delay: 0.3s;
+    }
+
+    .phone-item3 {
+      transition-delay: 0.45s;
+    }
+  }
+
+  .phone-item-slide {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .scroll-disabled {
+    height: 100%;
+    overflow: hidden;
   }
 }

@@ -1,38 +1,38 @@
 #skills {
-  height: 450px;
+  height: 600px;
   padding-top: 50px;
+}
 
-  .skills-wrapper {
-    width: 1024px;
-    margin: 0 auto;
+.skills-wrapper {
+  width: 1024px;
+  margin: 0 auto;
 
-    h1 {
-      font-family: "Lobster";
-      color: $primary-color;
-      font-size: 50px;
-      font-weight: 500;
-      padding: 20px 0 45px 0;
-      text-align: center;
+  h1 {
+    font-family: "Lobster";
+    color: $primary-color;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 20px 0 45px 0;
+    text-align: center;
+  }
+
+  .icons-wrapper,
+  .icons-wrapper2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+
+    img {
+      padding-bottom: 5px;
     }
+  }
 
-    .icons-wrapper,
-    .icons-wrapper2 {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      text-align: center;
-      font-weight: 600;
-      font-size: 18px;
-
-      img {
-        padding-bottom: 5px;
-      }
-    }
-
-    .icons-wrapper2 {
-      width: 50%;
-      margin: 85px auto 0 auto;
-    }
+  .icons-wrapper2 {
+    width: 50%;
+    margin: 10px auto 0 auto;
   }
 }
 
@@ -82,5 +82,19 @@
 
   .icons-wrapper {
     width: 1024px;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .skills-wrapper {
+    width: 100%;
+  }
+
+  .icon {
+    padding: 0 25px 50px 25px;
+  }
+
+  .icons-wrapper {
+    flex-wrap: wrap;
   }
 }

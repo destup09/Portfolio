@@ -43,3 +43,9 @@ button:focus {
   background-color: "white";
   height: 70px;
 }
+
+@media (max-width: $mobileL) {
+  #footer {
+    overflow-x: hidden;
+  }
+}
