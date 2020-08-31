@@ -349,7 +349,7 @@ a {
   }
   #landing-page {
     padding-top: 10px;
-    background-position: 0px -40px;
+    background-position: 0px -30px;
     height: 600px;
   }
   .landing-text {
@@ -357,7 +357,8 @@ a {
     height: 550px;
   }
   .landing-text .landing-p {
-    width: 335px;
+    width: 100%;
+    padding: 0 5% 0 5%;
     text-align: center;
     margin: 0 auto;
   }
@@ -1293,7 +1294,7 @@ p {
 }
 
 #skills {
-  height: 600px;
+  height: 700px;
   padding-top: 50px;
 }
 
